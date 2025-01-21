@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Perhitungan Distribusi Poisson</h1>
+        <p><strong>Rata-rata (λ):</strong> {{ lambda_mean }}</p>
+        <p><strong>Jumlah Penonton (k):</strong> {{ k }}</p>
+        <p><strong>Probabilitas tepat {{ k }} penonton:</strong> {{ prob_exact }}</p>
+        <p><strong>Probabilitas kurang dari {{ k }} penonton:</strong> {{ prob_less }}</p>
+        <p><strong>Probabilitas lebih dari {{ k }} penonton:</strong> {{ prob_more }}</p>
+        <a href="/">Kembali ke halaman utama</a>
+    </div>
+</body>
+</html>
